@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import api from '../../axios/config';
 import './issue.css';
 
@@ -29,16 +29,17 @@ const Issue = () => {
   if (!issue) return <p>Issue não encontrada.</p>;
 
   return (
-    <>
+    <div className='issue'>
       <header>
-        <div className="issue">
-          <h1>{issue.title}</h1> 
+        <div className="issue__title">
+          <h1>{issue.title}</h1>
+          <Link to='/' className='btn'>Voltar pra Home</Link>
         </div>
       </header>
       <div className='issue__body'>
         <p>{issue.body}</p> 
       </div>
-    </>
+    </div>
   );
 };
 
