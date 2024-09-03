@@ -1,0 +1,64 @@
+header {
+    border-radius: 10px ;
+    width: 70%;
+    background-color: #0b1b2b;   
+    margin: 0 auto;
+}
+.profile__img img{
+    width: 15rem;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.profile__info{
+    color: #fff;
+    font-family:sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+    ;
+}
+.profile__info h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+.profile__info p{
+    font-size: 16px;
+}
+.profile__info span{
+    font-size: 16px;
+    padding: 5px    ;
+}
+
+.links{
+    display: flex;
+    gap: 15px;
+}
+
+.links a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.links a:hover,
+.profile__info__cabecalho a:hover{
+    opacity: .7;
+}
+.profile__info__cabecalho{
+    display: flex;
+    justify-content: space-between;
+}
+.profile__info__cabecalho a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+}
+.profile{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
