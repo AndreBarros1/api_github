@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import api from '../../axios/config';
 
-const Header = ()=>{
-
-
+const Post = ()=>{
   const  { id }  = useParams(); 
   const [issue, setIssue] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -29,13 +27,10 @@ const Header = ()=>{
   if (loading) return <p>Carregando...</p>;
   if (!issue) return <p>Issue não encontrada.</p>;
     return(
-        <header>
-            <div className="issue__title">
-                <h1>{issue.title}</h1>
-                <Link to='/' className='btn'>Voltar pra Home</Link>
-            </div>
-        </header>
+        <div className='issue__body'>
+            <p>{issue.body}</p> 
+        </div>
     )
 }
 
-export default Header
+export default Post

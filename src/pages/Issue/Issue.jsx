@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import api from '../../axios/config';
 import './issue.css';
+import Header from '../../components/Header';
+import Post from '../../components/Post';
 
 const Issue = () => {
   const  { id }  = useParams(); 
@@ -30,15 +32,8 @@ const Issue = () => {
 
   return (
     <div className='issue'>
-      <header>
-        <div className="issue__title">
-          <h1>{issue.title}</h1>
-          <Link to='/' className='btn'>Voltar pra Home</Link>
-        </div>
-      </header>
-      <div className='issue__body'>
-        <p>{issue.body}</p> 
-      </div>
+      <Header/>
+      <Post/>
     </div>
   );
 };
