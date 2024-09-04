@@ -11,7 +11,7 @@ const Profile = () => {
 
     const getUsers = async()=>{
         try {
-            const resposta = await api.get('/users/PedrodAguiar')
+            const resposta = await api.get('/users/AndreBarros1')
             
             const data = resposta.data
             setUsers([data])
